@@ -1,0 +1,90 @@
+        :root {
+            --color-primario: #2ecc71;
+            --color-secundario: #27ae60;
+            --color-texto: #333;
+            --color-fondo: #f4f4f4;
+            --color-hover: #34495e;
+            --color-texto-tarjeta: #333;
+        }
+        .modo-oscuro {
+            --color-primario: #1abc9c;
+            --color-secundario: #16a085;
+            --color-texto: #ecf0f1;
+            --color-fondo: #2c3e50;
+            --color-hover: #3498db;
+            --color-texto-tarjeta: #000;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--color-texto);
+            background-color: var(--color-fondo);
+            transition: all 0.3s ease;
+        }
+        .navbar {
+            background-color: var(--color-primario);
+            transition: all 0.3s ease;
+        }
+        .navbar-brand, .nav-link {
+            color: #fff !important;
+            transition: all 0.3s ease;
+        }
+        .nav-link:hover {
+            color: var(--color-hover) !important;
+            transform: translateY(-2px);
+        }
+        h1, h2, h3 {
+            color: var(--color-primario);
+        }
+        .btn-primary {
+            background-color: var(--color-primario);
+            border-color: var(--color-primario);
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: var(--color-secundario);
+            border-color: var(--color-secundario);
+            transform: translateY(-2px);
+        }
+        #alternarModoOscuro {
+            cursor: pointer;
+        }
+        .card {
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .card-body {
+            color: var(--color-texto-tarjeta);
+            transition: color 0.3s ease;
+        }
+        a {
+            color: var(--color-primario);
+            transition: all 0.3s ease;
+        }
+        a:hover {
+            color: var(--color-secundario);
+            text-decoration: none;
+        }
+        .navbar-collapse {
+            transition: all 0.5s ease;
+        }
+        @media (max-width: 991px) {
+            .navbar-collapse {
+                max-height: 0;
+                overflow: hidden;
+            }
+            .navbar-collapse.show {
+                max-height: 300px;
+            }
+        }
+        #canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
